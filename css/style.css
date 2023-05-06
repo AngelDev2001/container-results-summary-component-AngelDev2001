@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root{
+    /* Primary */
+
+    --LightRed: hsl(0, 100%, 67%);
+    --LightRedOpacity: rgba(255, 87, 87, .1);
+    
+    --OrangeyYellow: hsl(39, 100%, 56%);
+    --OrangeyYellowOpacity: hsla(39, 100%, 56%, .1);
+    
+    --GreenTeal: hsl(166, 100%, 37%);
+    --GreenTealOpacity: hsla(166, 100%, 37%, .1);
+
+    --CobaltBlue: hsl(234, 85%, 45%);
+    --CobaltBlueOpacity: hsla(234, 85%, 45%, .1);
+
+    /* Gradients */
+
+    /* (background) */
+    --LightSlateBlue: hsl(252, 100%, 67%);
+    /* (background) */
+    --LightRoyalBlue: hsl(241, 81%, 54%);
+    
+    /* (circle) */
+    --VioletBlue: hsla(256, 72%, 46%, 1);
+    /* (circle) */
+    --PersianBlue: hsla(241, 72%, 46%, 0);
+    
+    /* Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --PaleBlue: hsl(221, 100%, 96%);
+    --LightLavender: hsl(241, 100%, 89%);
+    --DarkGrayBlue: hsl(224, 30%, 27%);
+
+    --fontHankenGrotesk: 'Hanken Grotesk', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontHankenGrotesk);
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARDS */
+.cards{
+    display: flex;
+}
+
+/* RESULT */
+
+.result{
+    width: 300px;
+    padding: 2rem;
+    background: linear-gradient(to bottom, var(--LightSlateBlue), var(--LightRoyalBlue) );
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.result__title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--LightLavender);
+}
+
+.result__number{
+    background: linear-gradient(to bottom, var(--VioletBlue), var(--PersianBlue));
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result__number-approximate{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--White);
+}
+
+.result__number-limit{
+    color: var(--LightLavender);
+}
+
+.result__great{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--PaleBlue);
+}
+
+.result__description{
+    text-align: center;
+    color: var(--LightLavender);
+}
+
+/* SUMMMARY */
+
+.summary{
+    width: 320px;
+    padding: 2rem 2rem 2rem 4rem;
+    background-color: var(--White);
+    border-radius: 0 1.5rem 1.5rem 0;
+    box-shadow: 3px 3px 15px var(--LightLavender);
+    margin-left: -2rem;
+}
+
+.summary__title{
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.summary__items{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary__items-item{
+    background-color: yellowgreen;
+    padding: .625rem;
+    border-radius: .625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data{
+    display: flex;
+    gap: .625rem;
+}
+
+.summary__items-item:first-child .data p{
+    color: var(--LightRed);
+}
+
+.summary__items-item:first-child{
+    background-color: var(--LightRedOpacity);
+}
+
+.summary__items-item:nth-child(2) .data p{
+    color: var(--OrangeyYellow);
+}
+
+.summary__items-item:nth-child(2){
+    background-color: var(--OrangeyYellowOpacity);
+}
+
+.summary__items-item:nth-child(3) .data p{
+    color: var(--GreenTeal);
+}
+
+.summary__items-item:nth-child(3){
+    background-color: var(--GreenTealOpacity);
+}
+
+.summary__items-item:nth-child(4) .data p{
+    color: var(--CobaltBlue);
+}
+
+.summary__items-item:nth-child(4){
+    background-color: var(--CobaltBlueOpacity);
+}
+
+.data__score{
+    font-weight: 700;
+    color: var(--LightLavender);
+}
+
+.summary__items-item span:first-child{
+    color: var(--DarkGrayBlue);
+}
+
+.summary__btn{
+    background-color: var(--DarkGrayBlue);
+    color: var(--PaleBlue);
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+    padding: .625rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+.summary__btn:hover{
+    cursor: pointer;
+    background: linear-gradient(to bottom, var(--LightSlateBlue), var(--LightRoyalBlue) );
+}
